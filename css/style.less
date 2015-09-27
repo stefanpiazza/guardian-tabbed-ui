@@ -1,0 +1,210 @@
+@keyframes fadeInUp {
+	from {transform: translateX(100%); opacity: 0;}	
+	to {transform: translateX(0%); opacity: 0.99;}	
+}
+
+@-webkit-keyframes fadeInUp {
+	from {-webkit-transform: translateX(100%); opacity: 0;}	
+	to {-webkit-transform: translateX(0%); opacity: 0.99;}	
+}
+
+@-moz-keyframes fadeInUp {
+	from {-moz-transform: translateX(100%); opacity: 0;}	
+	to {-moz-transform: translateX(0%); opacity: 0.99;}	
+}
+
+@-o-keyframes fadeInUp {
+	from {-o-transform: translateX(100%); opacity: 0;}	
+	to {-o-transform: translateX(0%); opacity: 0.99;}	
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Georgia, serif;
+}
+
+body {
+	@media (min-width: 320px) {
+		font-size: 1em;
+	}
+
+	@media (min-width: 480px) {
+		font-size: 1.3em;
+	}
+
+	@media (min-width: 768px) {
+		font-size: 1.6em;
+	}
+
+	@media (min-width: 1024px) {
+		font-size: 1.9em;
+	}
+
+	@media (min-width: 1200px) {
+		font-size: 2.1em;
+	}
+
+	@media (min-width: 1400px) {
+		font-size: 2.4em;
+	}
+}
+
+.tabs {
+
+	.tab {
+		float: left;
+		width: 33.3333333333%;
+
+		input[type='radio'] {
+			display: none;
+		}
+		
+		input[type='radio']:checked + label {
+			background-color: #ffffff;
+			font-weight: bold;
+		}
+
+		input[type='radio']:checked ~ .tab-content {
+			display: block;
+		}
+
+		label {
+			width: 100%;
+			float: left;
+
+			background-color: #f4f4ee;
+			color: #333333;
+
+			font-size: 1em;
+			line-height: 1em;
+			text-align: center;			
+
+			padding: 1em 0.5em;
+			box-sizing: border-box;			
+		}
+
+		ol.tab-content {
+			position: absolute;
+			display: none;
+
+			width: 100%;		
+			left: 0;
+
+			margin-top: 3em;
+			margin-bottom: 0;
+			padding: 0 2em;
+			box-sizing: border-box;
+
+			text-align: left;
+
+			overflow: hidden;
+
+			li {
+				color: #898989;
+				font-size: 1em;
+				padding: 0.5em 0;
+
+				opacity: 0;
+
+				animation: fadeInUp 400ms forwards;
+				-webkit-animation: fadeInUp 400ms forwards;
+				-moz-animation: fadeInUp 400ms forwards;
+				-o-animation: fadeInUp 400ms forwards;
+
+				a {
+					text-decoration: none;
+					color: #333333;
+				}
+			}
+
+			li::after {
+				content: '';
+
+				position: absolute;
+				width: 100%;			
+				bottom: 0;
+				left: 0;
+				height: 1px;
+
+				background-color: #0061A6;
+			}
+
+			//Refactor into loop
+			li:nth-child(1) {
+				animation-delay: 000ms;
+				-webkit-animation-delay: 000ms;
+				-moz-animation-delay: 000ms;
+				-o-animation-delay: 000ms;
+			}
+			
+			li:nth-child(2) {
+				animation-delay: 100ms;
+				-webkit-animation-delay: 100ms;
+				-moz-animation-delay: 100ms;
+				-o-animation-delay: 100ms;
+			}
+			
+			li:nth-child(3) {
+				animation-delay: 200ms;
+				-webkit-animation-delay: 200ms;
+				-moz-animation-delay: 200ms;
+				-o-animation-delay: 200ms;
+			}
+			
+			li:nth-child(4) {
+				animation-delay: 300ms;
+				-webkit-animation-delay: 300ms;
+				-moz-animation-delay: 300ms;
+				-o-animation-delay: 300ms;
+			}
+
+			li:nth-child(5) {
+				animation-delay: 400ms;
+				-webkit-animation-delay: 400ms;
+				-moz-animation-delay: 400ms;
+				-o-animation-delay: 400ms;
+			}
+
+			li:nth-child(6) {
+				animation-delay: 500ms;
+				-webkit-animation-delay: 500ms;
+				-moz-animation-delay: 500ms;
+				-o-animation-delay: 500ms;
+			}
+
+			li:nth-child(7) {
+				animation-delay: 600ms;
+				-webkit-animation-delay: 600ms;
+				-moz-animation-delay: 600ms;
+				-o-animation-delay: 600ms;
+			}
+
+			li:nth-child(8) {
+				animation-delay: 700ms;
+				-webkit-animation-delay: 700ms;
+				-moz-animation-delay: 700ms;
+				-o-animation-delay: 700ms;
+			}
+
+			li:nth-child(9) {
+				animation-delay: 800ms;
+				-webkit-animation-delay: 800ms;
+				-moz-animation-delay: 800ms;
+				-o-animation-delay: 800ms;
+			}
+
+			li:nth-child(10) {
+				animation-delay: 900ms;
+				-webkit-animation-delay: 900ms;
+				-moz-animation-delay: 900ms;
+				-o-animation-delay: 900ms;
+			}
+
+			li:last-child::after {
+				display: none;
+ 			}
+		}
+	}
+}

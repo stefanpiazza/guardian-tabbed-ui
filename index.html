@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='x-ua-compatible' content='ie=edge'>
+        <title></title>
+        <meta name='description' content=''>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class='tabs'>
+            <div id='football-tab' class='tab'>
+                <input type='radio' name='tab' value='football' id='football-tab-btn' onclick='getTabData()'>
+                <label for='football-tab-btn'>Football</label>                          
+                <ol id='football-tab-content' class='tab-content'></ol> 
+            </div>
+
+            <div id='uk-news-tab' class='tab'>
+                <input type='radio' name='tab' value='uk-news' id='uk-news-tab-btn' onclick='getTabData()'>
+                <label for='uk-news-tab-btn'>UK News</label>                          
+                <ol id='uk-news-tab-content' class='tab-content'></ol> 
+            </div>
+
+            <div id='technology-tab' class='tab'>
+                <input type='radio' name='tab' value='technology' id='technology-tab-btn' onclick='getTabData()'>
+                <label for='technology-tab-btn'>Technology</label>                          
+                <ol id='technology-tab-content' class='tab-content'></ol> 
+            </div>
+        </div>
+
+        <script type="text/javascript" src='js/script.js'></script>
+    </body>
+</html>
